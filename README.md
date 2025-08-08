@@ -16,6 +16,8 @@
 
 ```bash
 git clone https://github.com/Da-Shytka/cashFlowProject.git
+```
+```bash
 cd cashFlowProject
 ```
 
@@ -62,7 +64,10 @@ python manage.py runserver
 
 ---
 ## 6. Запуск frontend
-Из папки frontend
+Открыть второй терминал, из папки frontend
+```bash
+cd ..
+```
 ```bash
 cd frontend
 ```
@@ -72,7 +77,13 @@ python -m http.server 3000
 
 ---
 ## 7. Приложение
-Можно открывать
+Сделан swagger
+```bash
+http://127.0.0.1:8000/api/docs/swagger/
+
+```
+А вот и само приложение
 ```bash
 http://localhost:3000/
+
 ```

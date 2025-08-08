@@ -1,4 +1,4 @@
-import { apiRequest } from './api.js';
+import { apiRequest } from '../../api.js';
 
 const endpoints = {
   status: 'status',
