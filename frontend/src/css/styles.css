@@ -1,0 +1,250 @@
+body {
+  margin: 0;
+  font-family: 'DM Sans', sans-serif;
+  background-color: #edeae5 !important;
+  font-size: 14px;
+}
+
+nav {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  padding: 20px 0;
+}
+
+nav a {
+  text-decoration: none;
+  color: rgba(0, 0, 0, 0.575);
+  font-size: 16px;
+  line-height: 28px;
+  font-weight: 500;
+  font-weight: bold;
+  padding: 20px 20px;
+  border-radius: 8px;
+}
+
+nav a:hover {
+  background-color: #edeae5;
+  color: #026670;
+}
+
+nav a.active {
+  color: rgb(0, 0, 0);
+}
+
+h1 {
+  text-align: center;
+}
+
+.capcodeBlock {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+select {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 14px;
+  padding: 8px 12px;
+  border: 1px solid;
+  border-radius: 8px;
+  background-color: #f9f9f9;
+  min-width: 180px;
+  cursor: pointer;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+  appearance: none;
+  background-image:
+    linear-gradient(45deg, transparent 50%, #026670 50%),
+    linear-gradient(135deg, #026670 50%, transparent 50%);
+  background-position:
+    calc(100% - 20px) calc(1em + 2px),
+    calc(100% - 15px) calc(1em + 2px),
+    calc(100% - 25px) 0.5em;
+  background-size: 5px 5px, 5px 5px, 1px 1.5em;
+  background-repeat: no-repeat;
+}
+
+.entityForm {
+    display: flex;
+    gap: 2px;
+}
+
+.entityFormDop {
+    display: flex;
+}
+
+.capcodeInput button{
+  font-family: 'DM Sans', sans-serif;
+  font-size: 14px;
+  padding: 8px 12px;
+  border-radius: 8px;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+input {
+  padding: 8px 12px;
+  font-size: 14px;
+  border: 1px solid;
+  border-radius: 8px;
+}
+
+.capcodeTable {
+  width: 100%;
+  overflow-x: auto;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.table-responsive{
+  width: 100%;
+  overflow-x: auto;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  background-color: #ffffff;
+}
+
+thead {
+  background-color: #026670 !important;
+  color: white !important;
+}
+
+th, 
+td {
+  padding: 14px 18px;
+  text-align: left;
+  border-bottom: 1px solid #edeae5;
+  font-size: 16px;
+}
+
+.capcodeTable table tbody tr {
+  background-color: #026670 !important;
+  color: white !important;
+}
+
+.capcodeTable button {
+  background-color: #edeae5;
+  border: none;
+  color: #026670;
+  padding: 6px 10px;
+  margin-left: 6px;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.capcodeTable button:hover {
+  background-color: #9fedd7;
+  color: #000;
+}
+
+.table-responsive button {
+  background-color: #edeae5;
+  border: none;
+  color: #026670;
+  padding: 6px 10px;
+  margin-left: 6px;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.table-responsive button:hover {
+  background-color: #9fedd7;
+  color: #000;
+}
+
+
+.capcodeTable th:first-child,
+.capcodeTable td:first-child {
+  width: 75%;
+}
+
+.capcodeTable th:last-child,
+.capcodeTable td:last-child {
+  width: 25%;
+  text-align: center;
+}
+
+.operation-form {
+  max-width: 600px;
+  margin: 20px auto;
+  padding: 20px;
+  background: #f9f9f9;
+  border-radius: 12px;
+  font-size: 16px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+  font-size: 16px;
+}
+
+.form-group select{
+  width: 100%;
+  padding: 8px;
+}
+
+.form-group textarea {
+  resize: vertical;
+  width: 100%;
+  min-height: 80px;
+  font-size: 14px;
+  border: 1px solid;
+  border-radius: 8px;
+}
+
+.form-group input {
+  resize: vertical;
+  padding: 8px 12px;
+  font-size: 14px;
+  border: 1px solid;
+  border-radius: 8px;
+}
+
+.submit-btn {
+  background-color: #026670;
+  color: white;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.submit-btn:hover {
+  background-color: #025e66;
+}
+
+.rowg-3{
+  display: flex;
+  gap: 20px;
+  padding: 10px 20px;
+  font-size: 16px;
+}
+
+.btn {
+  background-color: #026670;
+  color: white;
+  padding: 8px 8px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+}

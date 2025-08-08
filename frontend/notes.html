@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Добавление/редактирование данных</title>
+  <link rel="stylesheet" href="src/css/styles.css" />
+</head>
+<body>
+  <nav>
+    <a href="index.html">Главная</a>
+    <a href="notes.html">Добавление/редактирование данных</a>
+    <a href="capcode.html">Управление справочниками</a>
+  </nav>
+
+  <h1>Добавление/редактирование записи</h1>
+  <div class="form-container" id="operationFormContainer"></div>
+  
+  <script type="module" src="src/js/notes.js"></script>
+  <script>
+    const links = document.querySelectorAll('nav a');
+    const currentPage = location.pathname.split('/').pop();
+    links.forEach(link => {
+      const linkPage = link.getAttribute('href');
+      if (linkPage === currentPage || (linkPage === 'index.html' && currentPage === '')) {
+        link.classList.add('active');
+      }
+    });
+  </script>
+</body>
+</html>

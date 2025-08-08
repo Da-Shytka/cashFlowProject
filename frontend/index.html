@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Главная страница</title>
+  <link rel="stylesheet" href="src/css/styles.css" />  
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+</head>
+<body>
+  <nav>
+    <a href="index.html">Главная</a>
+    <a href="notes.html">Добавление/редактирование данных</a>
+    <a href="capcode.html">Управление справочниками</a>
+  </nav>
+
+  <h1>Список операций</h1>
+
+  <div class="card mb-4">
+    <div class="card-body">
+      <form id="filtersForm" class="rowg-3">
+        <div class="col-md-2">
+          <label for="startDate" class="form-label">Дата от</label>
+          <input type="date" class="form-control" id="startDate">
+        </div>
+        <div class="col-md-2">
+          <label for="endDate" class="form-label">Дата до</label>
+          <input type="date" class="form-control" id="endDate">
+        </div>
+        <div class="col-md-2">
+          <label for="statusFilter" class="form-label">Статус</label>
+          <select class="form-select" id="statusFilter">
+            <option value="">Все</option>
+          </select>
+        </div>
+        <div class="col-md-2">
+          <label for="typeFilter" class="form-label">Тип</label>
+          <select class="form-select" id="typeFilter">
+            <option value="">Все</option>
+          </select>
+        </div>
+        <div class="col-md-2">
+          <label for="categoryFilter" class="form-label">Категория</label>
+          <select class="form-select" id="categoryFilter">
+            <option value="">Все</option>
+          </select>
+        </div>
+        <div class="col-md-2">
+          <label for="subcategoryFilter" class="form-label">Подкатегория</label>
+          <select class="form-select" id="subcategoryFilter">
+            <option value="">Все</option>
+          </select>
+        </div>
+        <div class="col-12">
+          <button type="submit" class="btn btn-primary">Применить</button>
+          <button type="button" id="resetFilters" class="btn btn-secondary">Сбросить</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <div id="loading">Загрузка данных...</div>
+  <div id="error" style="display:none; color: red; font-weight: bold;"></div>
+
+  <div class="table-responsive" style="display:none;">
+    <table id="operationsTable" class="table">
+      <thead></thead>
+      <tbody></tbody>
+    </table>
+  </div>
+
+  <script type="module" src="src/js/main.js"></script>
+  
+  <script>
+    const links = document.querySelectorAll('nav a');
+    const currentPage = location.pathname.split('/').pop();
+
+    links.forEach(link => {
+      const linkPage = link.getAttribute('href');
+      if (linkPage === currentPage || (linkPage === 'index.html' && currentPage === '')) {
+        link.classList.add('active');
+      }
+    });
+  </script>
+</body>
+</html>
